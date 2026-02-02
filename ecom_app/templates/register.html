@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    /* Full Page Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #2d6cdf;  /* Blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* FORM BOX */
+form {
+    background: #fff;
+    padding: 35px;
+    width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    color: #444;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #2d6cdf;
+    box-shadow: 0 0 5px rgba(45,108,223,0.4);
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    background-color: #2d6cdf;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #1f53b9;
+}
+</style>
+<body style="background-color: bisque;"><br><br><br>
+    <center>
+    <h1>USER REGISTRATION</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <label>Username:</label>
+        <input type="text" name="username"><br> <br>
+        <label>Email:</label>
+        <input type="email" name="email"><br> <br>
+        <label>Password:</label>
+        <input type="password" name="password"><br> <br>
+        <label>Confirm Password:</label>
+        <input type="password" name="confirm_password"><br> <br>
+        <input type="submit" value="Register"> 
+    </form>
+    </center>
+</body>
+</html>
