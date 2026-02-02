@@ -20,7 +20,7 @@ from .import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.product_list,name='product_list'),
+    path('',views.home,name='home'),
     path('order_list',views.order_list,name='order_list'),
     path('user_list',views.user_list,name='user_list'),
     path('orders_details',views.orders_details,name='order_details'),

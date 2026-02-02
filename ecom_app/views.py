@@ -6,7 +6,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 # Create your views here.
-def product_list(request):
+
+
+def home(request):
     products=Product.objects.all()
     return render (request,'product_list.html',{'products':products})
 
